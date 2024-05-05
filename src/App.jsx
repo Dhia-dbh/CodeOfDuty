@@ -1,14 +1,14 @@
-import Navbar from "./components/navbar/navbar";
-import SearchBar from "./components/searchbar/searchBar";
+import Home from "./components/Home/home";
+import { Routes, Route } from "react-router-dom";
+import AiSection from "./components/aiSection/aiSection";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <main>
-        <SearchBar />
-      </main>
-      <AiSection />
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/biblio" Component={AiSection} />
+      </Routes>
     </>
   );
 }
