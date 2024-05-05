@@ -1,0 +1,17 @@
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: none;
+  padding: 10px;
+}
+.navbar > ul {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+}
+.navbar > ul > li {
+  display: inline;
+}
