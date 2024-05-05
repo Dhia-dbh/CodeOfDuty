@@ -2,7 +2,7 @@ import Navbar from "../navbar/navbar";
 import SearchBar from "../searchbar/searchBar";
 import AiSection from "../aiSection/aiSection";
 
-function App() {
+function Home() {
   return (
     <>
       <Navbar />
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

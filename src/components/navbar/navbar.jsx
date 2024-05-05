@@ -1,22 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./navbar.css";
-function getSelectedText() {
-  if (window.getSelection) {
-    console.log(window.getSelection().toString());
-  } else if (document.selection) {
-    console.log(document.selection.createRange().text);
-  } else {
-    console.log("No text selected");
-  }
-}
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="navbar">
       <ul>
-        <li onMouseUp={getSelectedText}>Home</li>
-        <li>Mes cours</li>
-        <li>Bibliotéque</li>
+        <li onClick={() => navigate("/")}>Home</li>
+        <li onClick={() => navigate("/cours")}>Mes cours</li>
+        <li onClick={() => navigate("/biblio")}>Bibliotéque</li>
       </ul>
     </nav>
   );

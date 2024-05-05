@@ -14,4 +14,10 @@
 }
 .navbar > ul > li {
   display: inline;
+  transition: ease-in-out 0.16s;
+}
+.navbar > ul > li:hover {
+  cursor: pointer;
+  color: #5c5c5c;
+  transform: scale(1.1);
 }
