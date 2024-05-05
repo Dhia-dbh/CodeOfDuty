@@ -7,7 +7,7 @@ const File = ({ title }) => {
     <>
       <div className="file">
         <div className="imagePreview">
-          <img src="public/pdf.png" alt="pdf icon" height={"80px"} />
+          <img src="/pdf.png" alt="pdf icon" height={"80px"} />
         </div>
         <div className="namePreview">
           <span>{title}</span>
