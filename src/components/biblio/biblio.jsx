@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import Navbar from "../navbar/navbar";
 import File from "./file";
 import "./biblio.css";
-const Biblio = () => {
+
+const Biblio = ({ addToDownloadedFiles }) => {
   function is_filter_on() {
     return Object.values(filters).every((value) => value === false);
   }
@@ -28,13 +30,26 @@ const Biblio = () => {
   return (
     <>
       <Navbar />
+
       <div className="filesContainer">
         <section className="files">
           {!is_filter_on()
             ? files.map((file) =>
-                filters[file.type] ? <File title={file.title} /> : <></>
+                filters[file.type] ? (
+                  <File
+                    title={file.title}
+                    addToDownloadedFiles={addToDownloadedFiles}
+                  />
+                ) : (
+                  <></>
+                )
               )
-            : files.map((file) => <File title={file.title} />)}
+            : files.map((file) => (
+                <File
+                  title={file.title}
+                  addToDownloadedFiles={addToDownloadedFiles}
+                />
+              ))}
         </section>
         <section className="filterfiles">
           <ul>
