@@ -8,6 +8,7 @@ function App() {
       <main>
         <SearchBar />
       </main>
+      <AiSection />
     </>
   );
 }
